@@ -13,7 +13,7 @@ O site foi feito sem frameworks para garantir a melhor performance e controle so
 
 ## Estrutura do Site
 
-* **Hero:** Resumo Profissional e bloco interativo de pontos de dados.
+* **Hero:** Resumo Profissional e bloco interativo de rede de dados.
 * **Projetos** Destaque para o meu projeto de Análise de Dados - Ecommerce Olist.
 * **Contato** Possivel contatar pelo LinkedIn, GitHub e via Email.
 ---
