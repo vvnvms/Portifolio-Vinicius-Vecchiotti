@@ -4,6 +4,9 @@ Meu portfólio pessoal construído do zero para centralizar meus projetos e estu
 
 Atualmente, sou estudante de Ciência da Computação na Universidade Federal do ABC (UFABC) e estou focado em me desenvolver como Analista de Dados. 
 
+<img width="1903" height="992" alt="image" src="https://github.com/user-attachments/assets/0860c098-6deb-41ea-bd3c-0f28208661f7" />
+
+
 ## Tecnologias
 
 O site foi feito sem frameworks para garantir a melhor performance e controle sobre as animações:
