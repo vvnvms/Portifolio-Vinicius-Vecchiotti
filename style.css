@@ -7,6 +7,7 @@
     --text-title: #ffffff;
     --accent: #60519b;
     --accent-hover: #7a6bc4;
+    --btn-link: #5c5d63;
 }
 
 :root[data-theme="light"] {
@@ -17,6 +18,7 @@
     --text-title: #1e202c;
     --accent: #60519b;
     --accent-hover: #4a3e7a;
+    --btn-link: #cccccc;
 }
 
 /* === RESET & BASE === */
@@ -129,7 +131,7 @@ h1, h2, h3 { color: var(--text-title); margin-bottom: 1rem; }
 .skills-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
 .tag {
-    background: rgba(96, 81, 155, 0.15);
+    background: rgba(8, 1, 46, 0.15);
     color: var(--accent-hover);
     padding: 0.4rem 0.8rem;
     border-radius: 12px;
@@ -163,7 +165,7 @@ h1, h2, h3 { color: var(--text-title); margin-bottom: 1rem; }
 
 .btn-primary, .btn-secondary {
     color: var(--text-main);
-    background-color: #5d5c64;
+    background-color: var(--btn-link);
     padding: 0.8rem 1.5rem;
     border-radius: 12px;
     text-decoration: none;
