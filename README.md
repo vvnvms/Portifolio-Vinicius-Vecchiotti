@@ -13,9 +13,9 @@ O site foi feito sem frameworks para garantir a melhor performance e controle so
 
 ## Estrutura do Site
 
-* **Análise Olist:** Destaque para o meu projeto de logística e satisfação do cliente.
-* **Portfólio 3D & Arte:** Site desenvolvido para exibir projetos de design e modelagem 3D.
-* **Contato:** Sistema de proteção de e-mail contra web scrapers via JS.
-
+* **Hero:** Resumo Profissional e bloco interativo de pontos de dados.
+* **Projetos** Destaque para o meu projeto de Análise de Dados - Ecommerce Olist.
+* **Contato** Possivel contatar pelo LinkedIn, GitHub e via Email.
 ---
+
 Desenvolvido por Vinicius.
