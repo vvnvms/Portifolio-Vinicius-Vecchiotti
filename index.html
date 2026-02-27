@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinicius | Portfólio de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <header>
+        <div class="logo">Vinicius<span> V.</span></div>
+        <button id="theme-toggle" aria-label="Mudar tema">
+            <span id="theme-icon">☀️ Modo Claro</span>
+        </button>
+    </header>
+
+    <main class="grid">
+
+        <!-- Hero -->
+        <section class="card hero-section">
+            <div class="hero-content">
+                <h1>Olá, sou o Vinicius.</h1>
+                <p>Sou estudante de Ciência da Computação na Universidade Federal do ABC (UFABC),
+                    com forte interesse em tecnologia, desenvolvimento e análise de dados. Possuo
+                    experiência no Núcleo de Tecnologia da Informação da UFABC, atuando na manutenção
+                    e otimização de equipamentos, além de vivência no setor comercial, onde desenvolvi
+                    habilidades interpessoais, organização e trabalho em equipe.</p>
+                <p><strong>Atualmente, direciono meu desenvolvimento profissional para a área de Análise de Dados,</strong>
+                    aprofundando conhecimentos em Python, SQL e Excel, com foco em transformar dados em informações
+                    estratégicas e soluções eficientes para os desafios do mercado.</p>
+            </div>
+            <div class="canvas-container" id="canvas-wrapper">
+                <canvas id="networkCanvas"></canvas>
+            </div>
+        </section>
+
+        <!-- Stack -->
+        <section class="card skills-section">
+            <h2>Stack Principal</h2>
+            <div class="skills-tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Excel</span>
+                <span class="tag">Javascript</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Microsoft SQL server</span>
+            </div>
+        </section>
+
+        <!-- Projeto Principal -->
+        <section class="card project-section main-project">
+            <span class="badge">Projeto Destacado</span>
+            <h2>Análise Olist Ecommerce</h2>
+            <p>Análise focada em logística e satisfação do cliente utilizando o dataset real da Olist.</p>
+            <p>Feito com: Microsoft SQL, Python Notebook, PowerBI</p>
+            <a href="https://github.com/vvnvms/Analise-Olist-Ecommerce" class="btn-link">Ver Projeto &rarr;</a>
+        </section>
+
+        <!-- Projeto 2 -->
+        <section class="card project-section">
+            <span class="badge">WebDesign</span>
+            <h2>WebSite Sistema Operacional</h2>
+            <p>Desenvolvimento do site de portfólio da Julia Veloso Souza, focado em exibir projetos de design e
+                modelagem 3D. Com a interface interativa que relembra um Sistema Operacional.</p>
+            <a href="https://github.com/pinkyoyocat/Portfolio_Pink" class="btn-link">Ver Projeto &rarr;</a><br>
+            <a href="https://pinkyoyocat.vercel.app/" class="btn-link">Acessar Website &rarr;</a>
+        </section>
+
+        <!-- Projeto 3 -->
+        <section class="card project-section">
+            <span class="badge">Web / UI</span>
+            <h2>Meu Portfólio</h2>
+            <p>Criação deste portfólio do zero usando HTML, CSS (Grid/Flexbox) e JS, com sistema de Dark/Light mode.</p>
+            <a href="#" class="btn-link">Ver Código &rarr;</a>
+        </section>
+
+        <!-- Formação -->
+        <section class="card education-section">
+            <h3>🎓 Formação</h3>
+            <p><strong>Ciência da Computação</strong></p>
+            <p>Universidade Federal do ABC (UFABC) — Em Andamento</p>
+            <div class="skills-tags" style="margin-top: 1rem;">
+                <span class="tag">Alura</span>
+                <span class="tag">DataCamp</span>
+            </div>
+        </section>
+
+        <!-- Status -->
+        <section class="card status-section">
+            <div class="pulsing-dot"></div>
+            <h3>Status: Disponivel!</h3>
+            <p>Buscando oportunidades de estágio em Análise de Dados.</p>
+        </section>
+
+        <!-- Contato -->
+        <section class="card contact-section">
+            <h2>Vamos conversar?</h2>
+            <div class="contact-links">
+                <a href="#" class="btn-primary">LinkedIn</a>
+                <a href="#" class="btn-secondary">GitHub</a>
+            </div>
+            <button id="email-btn" class="btn-email">📪 Enviar E-mail</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

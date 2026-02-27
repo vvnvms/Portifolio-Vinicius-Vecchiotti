@@ -1,0 +1,265 @@
+/* === TEMAS === */
+:root[data-theme="dark"] {
+    --bg-color: #1e202c;
+    --grid-line: rgba(191, 192, 209, 0.05);
+    --card-bg: #31323e;
+    --text-main: #bfc0d1;
+    --text-title: #ffffff;
+    --accent: #60519b;
+    --accent-hover: #7a6bc4;
+}
+
+:root[data-theme="light"] {
+    --bg-color: #bfc0d1;
+    --grid-line: rgba(30, 32, 44, 0.1);
+    --card-bg: #ffffff;
+    --text-main: #31323e;
+    --text-title: #1e202c;
+    --accent: #60519b;
+    --accent-hover: #4a3e7a;
+}
+
+/* === RESET & BASE === */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    transition: background-color 0.4s ease, color 0.4s ease;
+    background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* === BACKGROUND CANVAS === */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* === LAYOUT === */
+header, main {
+    position: relative;
+    z-index: 10;
+}
+
+header {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-title);
+}
+.logo span { color: var(--accent); }
+
+/* === GRID === */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
+    grid-auto-flow: dense;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 24px;
+    padding: 2rem;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.4s ease;
+}
+.card:hover { transform: translateY(-5px); }
+
+h1, h2, h3 { color: var(--text-title); margin-bottom: 1rem; }
+
+/* === HERO === */
+.hero-section {
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.hero-content p { margin-bottom: 1rem; line-height: 1.6; }
+
+/* === CANVAS DE REDE === */
+.canvas-container {
+    width: 100%;
+    height: 250px;
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#networkCanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: crosshair;
+}
+
+/* === TAGS === */
+.skills-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.tag {
+    background: rgba(96, 81, 155, 0.15);
+    color: var(--accent-hover);
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid var(--accent);
+}
+
+.badge {
+    background: var(--accent);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+/* === BOTÕES === */
+.btn-link {
+    color: var(--accent-hover);
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.contact-links { display: flex; gap: 1rem; margin-top: 1rem; }
+
+.btn-primary, .btn-secondary {
+    color: var(--text-main);
+    background-color: #5d5c64;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(96, 81, 155, 0.4);
+    background-color: var(--accent-hover);
+    color: #ffffff;
+    border-color: var(--accent-hover);
+}
+.btn-primary:active, .btn-secondary:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.btn-email {
+    background-color: var(--accent);
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+.btn-email:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(96, 81, 155, 0.4);
+    background-color: var(--accent-hover);
+}
+.btn-email:active { transform: translateY(0) scale(0.98); }
+
+button#theme-toggle {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--text-title);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+button#theme-toggle:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* === STATUS === */
+.status-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.status-section h3 { margin-top: 1rem; margin-bottom: 0.5rem; }
+.status-section p { font-size: 0.9rem; }
+
+.pulsing-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+    0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+    70%  { transform: scale(1);    box-shadow: 0 0 0 10px rgba(74, 222, 128, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* === PROJETO PRINCIPAL (DESKTOP) === */
+@media (min-width: 769px) {
+    .main-project {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main-project p {
+        font-size: 1.1rem;
+        max-width: 80%;
+    }
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .hero-section { grid-column: span 1; grid-row: span 1; }
+    body { padding: 1rem; }
+}
